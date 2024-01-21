@@ -47,6 +47,10 @@ class MiniMailerMail extends Mailable  implements ShouldQueue
      */
     public function attachments(): array
     {
-        return [];
+        $attachments = array();
+        foreach($this->mailLog->attachments as $attachment){
+            $attachments[] = $attachment;
+        }
+        return $attachments;
     }
 }

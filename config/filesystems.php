@@ -56,6 +56,18 @@ return [
             'throw' => false,
         ],
 
+        'ckEditorImage' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/ckEditorImage'),
+            'throw' => false,
+        ],
+
+        'mailAttachment' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/mailAttachment'),
+            'throw' => false,
+        ],
+
     ],
 
     /*

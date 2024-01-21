@@ -25,5 +25,6 @@ Route::group(['prefix' => 'mailLog', 'as' => 'mailLog.', 'middleware' => ['auth'
     Route::get('/', [MailLogController::class, 'index'])->name('index');
     Route::get('/create', [MailLogController::class, 'create'])->name('create');
     Route::post('/store', [MailLogController::class, 'store'])->name('store');
+    Route::post('/upload-images', [MailLogController::class, 'uploadCKImage'])->name('image.upload');
 });
 

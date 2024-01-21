@@ -18,8 +18,18 @@ class MailLog extends Model
         'recipient',
         'subject',
         'body',
-        'attachment',
+        'attachments',
         'user_id',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'attachments' => 'array',
+        'recipient' => 'array',
     ];
 
     /**

@@ -22,10 +22,10 @@ class CreateMailRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'recipient' => 'required|email',
+            'recipient.*' => 'required|email',
             'subject' => 'required',
             'body' => 'required',
-            'attachment' => 'sometimes',
+            'attachments' => 'sometimes',
         ];
     }
 }

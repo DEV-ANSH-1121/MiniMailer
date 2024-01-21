@@ -8,10 +8,23 @@ use App\Http\Requests\LoginRequest;
 
 class AuthController extends Controller
 {
+    /**
+        * Returns Landing/Login page
+        *
+        * @return View
+    */ 
     public function index() {
         return view('welcome');
     }
 
+    /**
+        * Login cumregistration functionality
+        *
+        * @param LoginRequest $request  User Email
+        * 
+        * @throws Throwable $err If something went wrong
+        * @return Redirect
+    */ 
     public function login(LoginRequest $request) {
         try {
             $data = $request->validated();
@@ -32,6 +45,11 @@ class AuthController extends Controller
         
     }
 
+    /**
+        * Logout functionality
+        * 
+        * @return Redirect
+    */ 
     public function logout() {
         \Auth::logout();
         return redirect()->route('site.index');
