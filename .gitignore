@@ -3,12 +3,8 @@
 /vendor
 .env
 .env.backup
-Homestead.json
-Homestead.yaml
 npm-debug.log
 yarn-error.log
 public/storage_/.gitignore
-code.zip
 /.idea
-/laradock-alexadoc
 /node_modules
